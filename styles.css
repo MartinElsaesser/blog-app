@@ -1,0 +1,105 @@
+/* Scrollbar stuff */
+:root {
+	--scrollbarBG: #cfd8dc;
+	--thumbBG: #90a4ae;
+}
+
+body::-webkit-scrollbar,
+ul.todo-list::-webkit-scrollbar {
+	width: 11px;
+}
+
+body {
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track,
+ul.todo-list::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb,
+ul.todo-list::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 6px;
+	border: 3px solid var(--scrollbarBG);
+}
+
+/* Styles for site */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	position: static;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 200;
+	font-size: 50px;
+	margin: 0 0 10px;
+}
+
+h3 {
+	text-align: center;
+	font-weight: 300;
+	font-size: 30px;
+	margin: 0 0 10px;
+}
+h5 {
+	font-weight: 600;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+*:focus,
+*:active {
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.card {
+	padding: 20px;
+	width: 80%;
+	margin: 50px auto 50px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button {
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+button.round {
+	font-size: 30px;
+	border: none;
+	color: white;
+	border-radius: 50%;
+	margin: 10px auto 20px;
+	padding: 15px;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+}
+button.round:disabled {
+	pointer-events: none;
+}
